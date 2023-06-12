@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Restriction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        @media print {
+            body{
+                display:none;
+            }
+        }
+        #pressedKeys {
+            text-align: center;
+        }
+    </style>
+    <script src="browserRestriction.js"></script>
+</head>
+
+<body onbeforeprint="abortPrint()">
+This page is to test onKeyPress Events
+
+
+<div id="youDivSectionId">
+    <p>Keys u can't press</p>
+    <p>F12</p>
+    <p>Ctrl + P</p>
+    <p>Ctrl + U</p>
+    <p>Ctrl + S</p>
+    <p>Ctrl + A</p>
+    <p>Ctrl + Shift + i</p>
+    <p>Right click</p>
+
+</div>
+
+<div id="pressedKeys">
+
+</div>
+
+</body>
+</html>
